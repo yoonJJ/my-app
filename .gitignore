@@ -1,0 +1,61 @@
+# === 공통 무시 ===
+HELP.md
+.gradle
+build/
+bin/
+out/
+*.log
+.DS_Store
+Thumbs.db
+
+# === 환경 파일 ===
+.env
+.env.local
+
+# === 패키지 매니저 ===
+node_modules/
+dist/
+
+# === 백엔드 Gradle 설정 ===
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# === STS(Spring Tool Suite) ===
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+# === IntelliJ IDEA ===
+.idea/
+*.iws
+*.iml
+*.ipr
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+# === NetBeans ===
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# === VS Code ===
+.vscode/
+
+# === 프론트엔드 ===
+/frontend/.next
+/frontend/out
+/frontend/node_modules
+
+# === 백엔드 ===
+/backend/.gradle
+/backend/build
+/backend/out
