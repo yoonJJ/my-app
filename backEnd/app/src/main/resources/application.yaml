@@ -22,9 +22,9 @@ spring:
       hibernate:
         format_sql: true     # SQL 로그 보기 좋게 정렬
 
-  jwt:
-    secret: my-very-secret-key-jjyoon-1234567890123456
-    expiration: 3600000
+jwt:
+  secret: my-very-secret-key-jjyoon-1234567890123456
+  expiration: 3600000
 
 server:
   port: 8080  # 서버 포트
