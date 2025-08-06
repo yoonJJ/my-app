@@ -1,13 +1,13 @@
 package app.jjyoon.dev.user.controller;
 
-import app.jjyoon.dev.user.dto.LoginRequest;
-import app.jjyoon.dev.user.dto.LoginResponse;
-import app.jjyoon.dev.user.dto.SignupRequest;
-import app.jjyoon.dev.user.dto.SignupResponse;
+import app.jjyoon.dev.auth.UserDetailsImpl;
+import app.jjyoon.dev.user.dto.*;
+import app.jjyoon.dev.user.entity.User;
 import app.jjyoon.dev.user.service.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -30,4 +30,19 @@ public class UserController {
         LoginResponse response = userService.login(request);
         return ResponseEntity.ok(response);
     }
+
+    @GetMapping("/me")
+    public ResponseEntity<UserInfoResponse> getMyInfo(@AuthenticationPrincipal UserDetailsImpl userDetails) {
+        User user = userDetails.getUser(); // 실제 User 객체를 꺼냄
+
+        UserInfoResponse response = new UserInfoResponse(
+                user.getId(),
+                user.getLoginId(),
+                user.getNickname(),
+                user.getEmail()
+        );
+
+        return ResponseEntity.ok(response);
+    }
+
 }
