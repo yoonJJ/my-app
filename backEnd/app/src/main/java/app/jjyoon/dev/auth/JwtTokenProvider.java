@@ -18,7 +18,9 @@ public class JwtTokenProvider {
 
     private Key key;
 
-    private final long tokenValidTime = 1000L * 60 * 60 * 24; // 24시간
+    // private final long tokenValidTime = 1000L * 60 * 60 * 24; // application.yaml 설정
+    @Value("${jwt.expiration}")
+    private long tokenValidTime;
 
     @PostConstruct
     protected void init() {

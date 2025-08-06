@@ -18,7 +18,6 @@ public class UserDetailsImpl implements UserDetails {
         this.user = user;
     }
 
-    // 👉 이 메서드 추가!
     public User getUser() {
         return user;
     }
