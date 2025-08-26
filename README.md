@@ -6,9 +6,9 @@ JWT 인증, 회원가입/로그인, 게시판, 검색, 파일 업로드 등
 
 ---
 
-## 📦 기술 스택
+## 기술 스택
 
-### 🛠 Backend
+### Backend
 - Java 21
 - Spring Boot 3.5.4
 - Gradle
@@ -17,13 +17,13 @@ JWT 인증, 회원가입/로그인, 게시판, 검색, 파일 업로드 등
 - Bean Validation
 - Swagger (SpringDoc OpenAPI)
 
-### 💻 Frontend
+### Frontend
 - Next.js (App Router)
 - React
 - TypeScript
 - Axios (API 통신)
 
-### 🗄️ Database
+### Database
 - PostgreSQL (운영 환경)
 - H2 (개발/테스트 환경)
 
