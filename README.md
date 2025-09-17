@@ -1,6 +1,8 @@
-# Full-Stack Web Application
+# FullStack Web Application
 
-Spring Boot + Next.js 기반 풀스택 웹 애플리케이션
+**Spring Boot + Next.js** 기반 현대적인 풀스택 웹 애플리케이션
+
+완전한 CRUD 기능을 갖춘 게시판 시스템으로 JWT 인증, 파일 업로드, 댓글 시스템까지 포함된 프로덕션 레벨의 웹 애플리케이션입니다.
 
 ## 기술 스택
 
@@ -42,22 +44,33 @@ Spring Boot + Next.js 기반 풀스택 웹 애플리케이션
 **테스트 코드**
 - 단위 테스트 / 통합 테스트
 
-## 실행 방법
+## 빠른 시작
 
-### Backend 실행
+### 1. 저장소 클론
+```bash
+git clone https://github.com/yoonJJ/my_app.git
+cd my_app
+```
+
+### 2. Backend 실행
 ```bash
 cd backEnd/app
 ./gradlew bootRun
 ```
-- 서버: http://localhost:8080
-- H2 콘솔: http://localhost:8080/h2-console
+- **API 서버**: http://localhost:8080
+- **H2 콘솔**: http://localhost:8080/h2-console
+- **Swagger UI**: http://localhost:8080/swagger-ui.html
 
-### Frontend 실행
+### 3. Frontend 실행
 ```bash
-cd frontend
+cd frontEnd
+npm install
 npm run dev
 ```
-- 웹 애플리케이션: http://localhost:3000
+- **웹 애플리케이션**: http://localhost:3000
+
+### 4. 테스트 계정으로 체험
+회원가입 → 로그인 → 게시글 작성 순서로 진행하세요!
 
 ## API 엔드포인트
 
@@ -132,12 +145,34 @@ my_app/
     └── package.json           # 의존성
 ```
 
+## 주요 특징
+
+### 보안
+- **JWT 토큰 기반 인증** - 안전한 사용자 인증
+- **Spring Security** - 권한 기반 접근 제어
+- **패스워드 암호화** - BCrypt 해싱
+
+### 사용자 경험
+- **반응형 디자인** - 모바일/태블릿/데스크톱 완벽 지원
+- **실시간 업데이트** - API 호출 후 자동 새로고침
+- **로딩 상태 표시** - 사용자 친화적 인터페이스
+- **에러 처리** - 명확한 오류 메시지 제공
+
+### 성능
+- **페이징 처리** - 대용량 데이터 효율적 처리
+- **RESTful API** - 표준화된 API 설계
+- **TypeScript** - 타입 안전성 보장
+- **최적화된 빌드** - 빠른 로딩 속도
+
 ## 완성된 기능
 
-**완전한 풀스택 애플리케이션**
-**JWT 기반 인증 시스템**
-**RESTful API 설계**
-**반응형 웹 인터페이스**
-**실시간 데이터 처리**
-**에러 처리 및 유효성 검증**
+- **완전한 풀스택 애플리케이션**
+- **JWT 기반 인증 시스템**
+- **RESTful API 설계**
+- **반응형 웹 인터페이스**
+- **실시간 데이터 처리**
+- **에러 처리 및 유효성 검증**
+- **파일 업로드/다운로드**
+- **댓글 시스템**
+- **게시글 CRUD**
 
