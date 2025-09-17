@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: app-test
+
+  profiles:
+    active: test
+
+  # 테스트용 데이터베이스 설정
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: 
+  
+  # JPA 설정
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false
+        dialect: org.hibernate.dialect.H2Dialect
+  
+  # H2 콘솔 비활성화
+  h2:
+    console:
+      enabled: false
+
+# JWT 설정
+jwt:
+  secret: test-secret-key-for-testing-purposes-only
+  expiration: 3600000
+  refresh-expiration: 1209600000
+
+# 서버 설정
+server:
+  port: 0  # 랜덤 포트 사용
+
+# 파일 업로드 설정
+file:
+  upload-dir: test-uploads
+
+
